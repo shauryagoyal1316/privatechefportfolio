@@ -31,9 +31,8 @@ function Card({ d, idx }: { d: Dish; idx: number }) {
   const offset = idx % 4 === 1 ? "md:translate-y-12" : idx % 4 === 3 ? "md:translate-y-8" : "";
   return (
     <article
-      data-stagger={idx * 60}
-      className={`reveal lift-card bg-card p-8 ${offset}`}
-      style={{ boxShadow: "var(--shadow-soft)" }}
+      className={`lift-card bg-card p-8 animate-fade-up ${offset}`}
+      style={{ boxShadow: "var(--shadow-soft)", animationDelay: `${idx * 60}ms` }}
     >
       <p className={`font-label text-xs2 ${seasonGold} mb-4`}>{d.season}</p>
       <h3 className="font-display text-foreground" style={{ fontSize: 25 }}>{d.name}</h3>
