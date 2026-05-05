@@ -178,10 +178,20 @@ export default function Booking() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="btn-base font-label text-xs2 disabled:opacity-60"
+                  className="btn-base font-label text-xs2 relative overflow-hidden disabled:cursor-wait"
                   style={{ background: "hsl(var(--gold))", color: "hsl(var(--gold-foreground))" }}
                 >
-                  {submitting ? "Sending…" : "Request a Date"}
+                  <span className="relative z-10">{submitting ? "Sending…" : "Request a Date"}</span>
+                  {submitting && (
+                    <span
+                      aria-hidden
+                      className="absolute inset-0 z-0"
+                      style={{
+                        background: "linear-gradient(90deg, transparent, hsl(var(--gold-foreground) / 0.2), transparent)",
+                        animation: "shimmer-strip 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+                      }}
+                    />
+                  )}
                 </button>
                 <p className="font-body text-xs2 text-primary-foreground/60">
                   No payment taken — this is a request, not a booking.
