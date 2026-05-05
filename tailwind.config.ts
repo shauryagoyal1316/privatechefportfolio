@@ -100,12 +100,27 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "marquee": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "draw-check": {
+          "0%": { strokeDashoffset: "24" },
+          "100%": { strokeDashoffset: "0" },
+        },
+        "shimmer": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 400ms cubic-bezier(0.16, 1, 0.3, 1) both",
         "fade-in": "fade-in 250ms cubic-bezier(0.16, 1, 0.3, 1) both",
+        "marquee": "marquee 40s linear infinite",
+        "draw-check": "draw-check 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "shimmer": "shimmer 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite",
       },
     },
   },
