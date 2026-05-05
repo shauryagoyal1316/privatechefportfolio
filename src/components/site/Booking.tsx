@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { Check } from "lucide-react";
+
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please share your name.").max(80),
@@ -68,8 +68,7 @@ export default function Booking() {
       <div className="relative mx-auto max-w-[1280px] px-6 md:px-10 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <p className="font-label text-xs2 text-primary-foreground/70 mb-4">
-            <span className="ornament mr-3 align-middle" style={{ background: "hsl(var(--gold))" }} />
-            Reservations
+            <span className="text-[hsl(var(--gold))]">06 ·</span> Reservations
           </p>
           <h2 className="font-display text-primary-foreground" style={{ fontSize: 49 }}>
             Pick a night. I'll handle the rest.
@@ -87,10 +86,15 @@ export default function Booking() {
           {done ? (
             <div className="bg-primary-foreground/5 border border-primary-foreground/15 p-10 animate-fade-up">
               <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mb-6"
+                className="w-16 h-16 rounded-full flex items-center justify-center mb-8"
                 style={{ background: "hsl(var(--gold))" }}
               >
-                <Check className="w-6 h-6 text-[hsl(var(--gold-foreground))]" strokeWidth={2.5} />
+                <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none" stroke="hsl(var(--gold-foreground))" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                  <path
+                    d="M5 12.5l4.5 4.5L19 7"
+                    style={{ strokeDasharray: 24, strokeDashoffset: 24, animation: "draw-check 600ms cubic-bezier(0.16, 1, 0.3, 1) 150ms forwards" }}
+                  />
+                </svg>
               </div>
               <h3 className="font-display text-primary-foreground" style={{ fontSize: 31 }}>
                 Thank you, {form.name.split(" ")[0]}.
