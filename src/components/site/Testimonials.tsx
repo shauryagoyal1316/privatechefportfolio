@@ -20,12 +20,12 @@ export default function Testimonials() {
   return (
     <section className="bg-background" style={{ paddingTop: 80, paddingBottom: 80 }}>
       <div className="mx-auto max-w-[1280px] px-6 md:px-10">
-        <div className="reveal mb-16 max-w-2xl">
+        <div className="reveal mb-16 max-w-3xl">
           <p className="font-label text-xs2 text-muted-foreground mb-4">
-            <span className="ornament mr-3 align-middle" /> Kind Words
+            <span className="text-[hsl(var(--gold))]">05 ·</span> Kind Words
           </p>
-          <h2 className="font-display text-foreground" style={{ fontSize: 39 }}>
-            From people who've sat at the table.
+          <h2 className="font-display text-foreground" style={{ fontSize: "clamp(32px, 4.4vw, 56px)", letterSpacing: "-0.035em", lineHeight: 1.05 }}>
+            From people who've <span className="italic font-normal" style={{ fontWeight: 400 }}>sat at the table.</span>
           </h2>
         </div>
 

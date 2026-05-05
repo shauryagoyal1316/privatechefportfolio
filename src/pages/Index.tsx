@@ -1,6 +1,7 @@
 import { useReveal } from "@/hooks/use-reveal";
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
+import Featured from "@/components/site/Featured";
 import Philosophy from "@/components/site/Philosophy";
 import Menu from "@/components/site/Menu";
 import Gallery from "@/components/site/Gallery";
@@ -15,6 +16,7 @@ const Index = () => {
     <main className="relative bg-background text-foreground">
       <Nav />
       <Hero />
+      <Featured />
       <Philosophy />
       <Menu />
       <Gallery />

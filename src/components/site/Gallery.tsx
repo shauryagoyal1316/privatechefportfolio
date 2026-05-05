@@ -29,9 +29,11 @@ export default function Gallery() {
         <div className="reveal mb-16 flex items-end justify-between flex-wrap gap-6">
           <div>
             <p className="font-label text-xs2 text-muted-foreground mb-4">
-              <span className="ornament mr-3 align-middle" /> The Gallery
+              <span className="text-[hsl(var(--gold))]">03 ·</span> The Gallery
             </p>
-            <h2 className="font-display text-foreground" style={{ fontSize: 39 }}>From the kitchen.</h2>
+            <h2 className="font-display text-foreground" style={{ fontSize: "clamp(32px, 4.4vw, 56px)", letterSpacing: "-0.035em", lineHeight: 1.05 }}>
+              From the <span className="italic font-normal" style={{ fontWeight: 400 }}>kitchen.</span>
+            </h2>
           </div>
           <p className="font-body text-base2 text-muted-foreground max-w-sm">
             Plates, tables, and the moments in between. Photographed at recent dinners.

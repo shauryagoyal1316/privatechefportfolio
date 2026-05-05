@@ -52,10 +52,10 @@ export default function Menu() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 reveal">
           <div>
             <p className="font-label text-xs2 text-muted-foreground mb-4">
-              <span className="ornament mr-3 align-middle" /> The Menu
+              <span className="text-[hsl(var(--gold))]">02 ·</span> The Menu
             </p>
-            <h2 className="font-display text-foreground" style={{ fontSize: 39 }}>
-              What's on the table.
+            <h2 className="font-display text-foreground" style={{ fontSize: "clamp(32px, 4.4vw, 56px)", letterSpacing: "-0.035em", lineHeight: 1.05 }}>
+              What's on <span className="italic font-normal" style={{ fontWeight: 400 }}>the table.</span>
             </h2>
           </div>
           <div className="inline-flex border-t border-b border-foreground/10">
